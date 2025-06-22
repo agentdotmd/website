@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make an AGENT.md</title>
+    <meta name="description" content="A standard configuration file for AI coding agents. Because consistency beats chaos.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Make an AGENT.md</h1>
+        <p class="subtitle">Because AI agents shouldn't have to guess your coding standards</p>
+    </header>
+
+    <main>
+        <section id="intro">
+            <div class="xkcd-reference">
+                <p><em>"How standards proliferate"</em> — <a href="https://xkcd.com/927/">XKCD #927</a></p>
+                <p>But seriously, this time we really do need <strong>one</strong> standard.</p>
+            </div>
+        </section>
+
+        <section id="problem">
+            <h2>The Problem</h2>
+            <p>Every AI coding assistant has its own configuration approach:</p>
+            <ul>
+                <li><strong>Claude:</strong> looks for <code>CLAUDE.md</code></li>
+                <li><strong>OpenAI Codex</strong> expects <code>AGENTS.md</code></li>
+                <li><strong>Cline:</strong> expects <code>.cline_rules</code></li>
+                <li><strong>Cursor:</strong> uses <code>.cursorrules</code></li>
+                <li><strong>Amp:</strong> reads <code>AGENT.md</code></li>
+                <li><strong>Windsurf:</strong> expects <code>.windsurfrules</code></li>
+                <li><strong>GitHub Copilot:</strong> <code>.github/copilot-instructions.md</code></li>
+                <li><strong>Augment:</strong> looks for <code>.augment-guidelines</code></li>
+                <li><strong>Roo Code:</strong> expects <code>.roorules</code></li>
+            </ul>
+            <p>Developers are creating multiple config files for the same information. This is inefficient and error-prone.</p>
+        </section>
+
+        <section id="solution">
+            <h2>The Solution: AGENT.md</h2>
+            <p>A single, vendor-neutral configuration file that all AI coding agents can understand.</p>
+            
+            <div class="benefits">
+                <h3>Why AGENT.md?</h3>
+                <ul>
+                    <li><strong>Vendor-neutral:</strong> Not tied to any specific AI service, any AI tool developer can contribute</li>
+                    <li><strong>Descriptive:</strong> Clear what the file is for</li>
+                    <li><strong>Markdown:</strong> Human-readable and easy to maintain</li>
+                    <li><strong>Standardized:</strong> One file, all agents</li>
+                    <li><strong>Domain secured:</strong> On X, when you type AGENT.md it will redirect to this site. AGENTS.md is squatted.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="agent101">
+            <h2>AGENT.md 101</h2>
+
+            <div class="qa-section">
+                <h3>What is it?</h3>
+                <p>An AGENT.md is a markdown file that tells AI coding agents how your project works. It contains coding standards, project structure, testing commands, and development practices.</p>
+
+                <h3>Why should I make it?</h3>
+                <p>It helps AI agents understand your codebase faster and follow your team's conventions. Instead of agents guessing or making assumptions, they get explicit guidance.</p>
+
+                <h3>Who should make it?</h3>
+                <p>Any developer or team working with AI coding assistants. If you want consistent, high-quality AI-generated code that follows your standards.</p>
+
+                <h3>When should I make it?</h3>
+                <p>As soon as you start using AI coding agents. It's especially valuable for teams and open-source projects where multiple people work with AI assistants.</p>
+
+                <h3>Where should I put it?</h3>
+                <p>In the root directory of your project, alongside your README.md. All major AI coding agents should look here first.</p>
+            </div>
+        </section>
+
+        <section id="template">
+            <h2>Template</h2>
+            
+            <div class="template-container">
+                <div class="template-input">
+                    <h4>AGENT.md Content (editable)</h4>
+                    <textarea id="agent-input" rows="20" cols="80"># Agent Configuration
+
+## Project Overview
+This is a React TypeScript project using Vite for bundling and testing with Jest.
+
+## Development Commands
+- `npm run dev` - Start development server
+- `npm run build` - Build for production  
+- `npm run test` - Run tests
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript compiler
+
+## Code Style
+- Use TypeScript for all new files
+- Follow existing naming conventions (camelCase for variables, PascalCase for components)
+- Use functional components with hooks
+- Prefer const assertions and strict typing
+- Use absolute imports with @ alias for src/
+
+## Testing
+- Write tests for all new components in `*.test.tsx` files
+- Use React Testing Library for component tests
+- Mock external dependencies
+- Aim for 80%+ test coverage
+
+## Architecture
+- Components in `src/components/`
+- Utilities in `src/utils/`
+- Types in `src/types/`
+- API calls in `src/api/`
+
+## Dependencies
+- Prefer built-in browser APIs when possible
+- Always check if dependency already exists before adding new ones
+- Use exact versions in package.json</textarea>
+                </div>
+                
+                <div class="template-output">
+                    <h4>Rendered</h4>
+                    <div id="agent-preview" class="markdown-preview">
+                        <!-- Preview will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="adoption">
+            <h2>For AI Companies</h2>
+            <p>Help us standardize! Update your AI agents to look for <code>AGENT.md</code> first, then fall back to your current approach.</p>
+            
+            <div class="company-benefits">
+                <h3>Benefits for AI Companies</h3>
+                <ul>
+                    <li><strong>Better user experience:</strong> Users only need one config file</li>
+                    <li><strong>Reduced support burden:</strong> Clear, standardized configuration</li>
+                    <li><strong>Faster onboarding:</strong> Developers can reuse existing AGENT.md files</li>
+                    <li><strong>Industry leadership:</strong> Be part of establishing the standard</li>
+                </ul>
+            </div>
+
+            <div class="implementation">
+                <h3>Simple Implementation</h3>
+                <p>Make your agent check for files in this order:</p>
+                <ol>
+                    <li><code>AGENT.md</code> (the standard)</li>
+                    <li>Your current format (for backwards compatibility)</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="contribute">
+            <h2>Join the Standard</h2>
+            <p>This is a community effort. Help us create a better development experience for everyone using AI coding assistants.</p>
+            
+            <div class="cta">
+                <p><strong>AI Companies:</strong> Add AGENT.md support to your agents</p>
+                <p><strong>Developers:</strong> Start using AGENT.md in your projects</p>
+                <p><strong>Everyone:</strong> Spread the word about the standard</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with ❤️ for better AI-human collaboration</p>
+        <p><a href="https://github.com/agentdotmd/website">Contribute to the standard</a></p>
+    </footer>
+
+    <script>
+        // Simple markdown preview - just basic formatting for demo
+        function updatePreview() {
+            const input = document.getElementById('agent-input').value;
+            const preview = document.getElementById('agent-preview');
+            
+            // Basic markdown to HTML conversion
+            let html = input
+                .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+                .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+                .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+                .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
+                .replace(/`(.*?)`/gim, '<code>$1</code>')
+                .replace(/^- (.*$)/gim, '<li>$1</li>')
+                .replace(/\n\n/g, '</p><p>')
+                .replace(/^(?!<[hl]|<li)(.+)$/gim, '<p>$1</p>');
+            
+            // Wrap consecutive <li> elements in <ul>
+            html = html.replace(/(<li>.*?<\/li>)(?:\s*<li>.*?<\/li>)*/gs, function(match) {
+                return '<ul>' + match + '</ul>';
+            });
+            
+            preview.innerHTML = html;
+        }
+        
+        // Update preview on input
+        document.getElementById('agent-input').addEventListener('input', updatePreview);
+        
+        // Initial preview
+        updatePreview();
+    </script>
+</body>
+</html>
